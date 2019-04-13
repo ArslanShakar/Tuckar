@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+
+        <!--  text color primary that is the tool bar title color , edit text-->
+        <item name="android:textColorPrimary">@android:color/holo_red_dark</item>
+
+        <!--  overrite default ripple effect color that is grey by default -->
+        <item name="android:textColorHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>
