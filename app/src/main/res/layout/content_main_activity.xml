@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.smarteist.autoimageslider.SliderLayout
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <ImageView
+            android:id="@+id/img_view_bands"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tuckar_app_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_slider" />
+
+        <LinearLayout
+            android:id="@+id/ll_buy_rent_invest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_80_percent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_view_bands">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/round_bg_white"
+                android:padding="1dp">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/round_left_bg_logo_red"
+                    android:onClick="buyPropertyOnClick"
+                    android:text="@string/buy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:onClick="rentPropertyOnClick"
+                    android:text="@string/rent"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_logo"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/red_logo" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:onClick="investOnClick"
+                    android:text="@string/invest"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red_logo"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_buy_rent_invest">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Mega Projects"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <include layout="@layout/item_mega_project" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Featured Projects"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <include layout="@layout/item_featured_project" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Recent Verified Listings"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <include layout="@layout/item_recent_verified_listing" />
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

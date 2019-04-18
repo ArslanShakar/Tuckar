@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4a26fd</color>
-    <color name="colorPrimaryDark">#3d00e0</color>
+    <color name="colorPrimary">@color/white</color>
+    <!--<color name="colorPrimary">@color/white</color>-->
+    <!--<color name="colorPrimaryDark">#3d00e0</color> -->
+    <color name="colorPrimaryDark">@color/red_logo</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">@android:color/white</color>
     <color name="black">@android:color/black</color>
+    <color name="red_dark">@android:color/holo_red_dark</color>
+    <color name="grey_medium">#948991</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="grey">#696969</color>
+    <color name="lightGrey">#ddd</color>
+    <color name="red_logo">#dc3545</color>
+    <color name="transparent_80_percent">#20000000</color>
+    <color name="transparent_50_percent">#50000000</color>
+    <color name="transparent_30_percent">#80000000</color>
+    <color name="lightBlack">#23232d</color>
+    <color name="lowWhite">#96FFFFFF</color>
+    <color name="silverLight">#EEEEEE</color>
+    <color name="blue">#2196F3</color>
+    <color name="red">#F00</color>
+    <color name="green">#090</color>
+    <color name="yellow">#ffae00</color>
+    <color name="yellowDark">#fece8f07</color>
+    <color name="silver">#abaaaa</color>
+    <color name="lightBlue">#33b5e5</color>
+    <color name="pink">#f50684</color>
+    <color name="pinkShade">#e2f91289</color>
+
 </resources>

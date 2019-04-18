@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:paddingTop="8dp"
+    tools:showIn="navigation_view">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="172dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/tuckar_logo_bg_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/round_left_bg_stroke_light_grey"
+            android:digits="0123456789"
+            android:gravity="center"
+            android:hint="@string/enter_property_id"
+            android:inputType="number"
+
+            android:maxLines="1"
+            android:padding="11dp"
+            android:textSize="12sp"
+            tools:ignore="Autofill" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/round_right_bg_logo_red"
+            android:drawableStart="@drawable/ic_search"
+            android:gravity="center"
+            android:padding="8dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@color/red_logo"
+        android:drawableStart="@drawable/ic_home_add"
+        android:drawablePadding="8dp"
+        android:gravity="start|center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="0dp"
+        android:text="@string/add_property"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_layout" />
+
+</android.support.constraint.ConstraintLayout>

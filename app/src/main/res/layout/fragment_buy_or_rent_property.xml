@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:drawableEnd="@drawable/ic_reset"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="@string/reset_filters"
+        android:textColor="@color/red_logo" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:drawableEnd="@drawable/ic_arrow_drop_down"
+        android:gravity="start|center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/select_city"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:drawableEnd="@drawable/ic_arrow_drop_down"
+        android:enabled="false"
+        android:gravity="start|center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/select_area"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:drawableEnd="@drawable/ic_arrow_drop_down"
+        android:gravity="start|center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/all_property_types"
+        android:textAllCaps="false" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/round_bg_logo_red"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+    <!-- <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="end"
+         android:drawablePadding="8dp"
+         android:padding="8dp"
+         android:text="@string/cancel"
+         android:textColor="@color/red_logo" />-->
+
+</LinearLayout>
