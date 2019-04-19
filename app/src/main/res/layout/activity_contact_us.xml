@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUsActivity">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fitsSystemWindows="true"
+        app:layout_constraintBottom_toTopOf="@id/bt_request_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/off_white"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/head_office"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/tuckar_address" />
+
+            <TextView
+                android:id="@+id/tv_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableStart="@drawable/ic_call_receive"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/tuckar_phone" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/tuckar_email" />
+
+            <TextView
+                android:id="@+id/tv_website_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableStart="@drawable/ic_web_address"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/tuckar_website_address"
+                android:textColor="@color/blue" />
+
+            <TextView
+                android:id="@+id/tv_weekly_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:drawableStart="@drawable/ic_clock"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/tuckar_schedule_open" />
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_request_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/grey_dark"
+        android:onClick="requestInfoOnClick"
+        android:padding="8dp"
+        android:text="@string/request_info"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/bt_get_directions"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bt_get_directions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/red_logo"
+        android:padding="8dp"
+        android:text="@string/get_directions"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bt_request_info" />
+
+</android.support.constraint.ConstraintLayout>

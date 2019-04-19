@@ -2,17 +2,12 @@ package com.jems.tuckar;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
-public class SignupActivity extends AppCompatActivity {
+public class OurStoryActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
-    }
-
-    public void backArrowOnClick(View view) {
-        onBackPressed();
+        setContentView(R.layout.activity_our_story);
     }
 }

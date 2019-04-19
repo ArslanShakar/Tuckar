@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">@color/white</color>
-    <!--<color name="colorPrimary">@color/white</color>-->
-    <!--<color name="colorPrimaryDark">#3d00e0</color> -->
     <color name="colorPrimaryDark">@color/red_logo</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">@android:color/white</color>
@@ -11,12 +9,12 @@
     <color name="grey_medium">#948991</color>
     <color name="transparent">#00ffffff</color>
     <color name="grey">#696969</color>
-    <color name="lightGrey">#ddd</color>
+    <color name="greyLight">#ddd</color>
     <color name="red_logo">#dc3545</color>
     <color name="transparent_80_percent">#20000000</color>
     <color name="transparent_50_percent">#50000000</color>
     <color name="transparent_30_percent">#80000000</color>
-    <color name="lightBlack">#23232d</color>
+    <color name="blackLight">#23232d</color>
     <color name="lowWhite">#96FFFFFF</color>
     <color name="silverLight">#EEEEEE</color>
     <color name="blue">#2196F3</color>
@@ -28,5 +26,8 @@
     <color name="lightBlue">#33b5e5</color>
     <color name="pink">#f50684</color>
     <color name="pinkShade">#e2f91289</color>
+    <color name="off_white">#c0f5f4f4</color>
+    <color name="grey_dark">#212121</color>
+    <color name="green_medium">#37a849</color>
 
 </resources>

@@ -51,7 +51,9 @@
             android:value="AIzaSyDroGF6HvpfWTWhay9CgkyKo_yzV35gZHw" />
 
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".OurStoryActivity" />
+        <activity android:name=".ContactUsActivity"></activity>
     </application>
 
 </manifest>

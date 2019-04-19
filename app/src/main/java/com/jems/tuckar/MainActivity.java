@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -76,12 +77,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId())
-        {
+        switch (menuItem.getItemId()) {
             case R.id.mLogin:
                 SwitchActivity.moveTo(this, LoginActivity.class);
                 return true;
-
+            case R.id.mStory:
+                SwitchActivity.moveTo(this, OurStoryActivity.class);
+                return true;
+            case R.id.mContactUs:
+                SwitchActivity.moveTo(this, ContactUsActivity.class);
+                return true;
             default:
                 return false;
         }
@@ -175,8 +180,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragment.show(manager, getString(R.string.tag));
     }
 
-    /***************     ***************/
-
+    /***************  onStart   ***************/
+    @Override
+    protected void onStart() {
+        super.onStart();
+        navigationView.getMenu().clear();
+        navigationView.inflateMenu(R.menu.nav_drawer_main);
+    }
     /***************     ***************/
     /***************     ***************/
 

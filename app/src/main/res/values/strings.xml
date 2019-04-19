@@ -37,7 +37,29 @@
     <string name="login_with_google">Login with Google</string>
     <string name="email">Email</string>
     <string name="phone">Phone</string>
-    <string name="by_clicking_regiser_agree">By clicking regiser button you agree to company</string>
+    <string name="by_clicking_regiser_agree">By clicking register button you agree to company</string>
     <string name="terms_conditions">Terms &amp; Conditions</string>
     <string name="register">Register</string>
+    <string name="year">Year</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="head_office">Head Office</string>
+    <string name="address">Address</string>
+    <string name="schedule">Schedule</string>
+    <string name="request_info">Request Info</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="tuckar_email">info@tuckar.com</string>
+    <string name="tuckar_phone">+92 300 0000 000</string>
+    <string name="tuckar_schedule_open">Monday - Saturday: 8:00 AM - 6:00 PM. Sunday: CLOSED</string>
+    <string name="tuckar_address">Islamabad, Pakistan.</string>
+    <string name="tuckar_website_address"><u>https://www.tuckar.com/</u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="write_your_message">Write your message…</string>
+    <string name="uri_phone_call">tel:</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="incorrect_phone_format">Phone Number Format is Invalid!</string>
+    <string name="mobile_not_found">Mobile no. Not Found.</string>
 </resources>

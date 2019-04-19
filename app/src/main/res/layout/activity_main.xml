@@ -21,6 +21,8 @@
 
         <include layout="@layout/layout_toolbar" />
 
+        <include layout="@layout/layout_divider_horizontal_light_grey" />
+
         <include layout="@layout/content_main_activity" />
     </LinearLayout>
 

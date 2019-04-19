@@ -34,7 +34,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        SwitchActivity.moveTo(SplashScreenActivity.this, SignupActivity.class);
+        SwitchActivity.moveTo(SplashScreenActivity.this, MainActivity.class);
         //checkUserSession();
     }
 }
