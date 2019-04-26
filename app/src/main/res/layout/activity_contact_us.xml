@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactUsActivity">
+    tools:context=".activities.ContactUsActivity">
 
     <include
         android:id="@+id/layout_toolbar"
@@ -26,7 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:background="@color/off_white"
+            android:background="@color/offWhite"
             android:orientation="vertical">
 
             <include layout="@layout/layout_divider_horizontal_light_grey" />
@@ -97,7 +97,7 @@
         android:id="@+id/bt_request_info"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/grey_dark"
+        android:background="@color/greyDark"
         android:onClick="requestInfoOnClick"
         android:padding="8dp"
         android:text="@string/request_info"
@@ -111,7 +111,7 @@
         android:id="@+id/bt_get_directions"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/red_logo"
+        android:background="@color/logoRed"
         android:padding="8dp"
         android:text="@string/get_directions"
         android:textAllCaps="false"

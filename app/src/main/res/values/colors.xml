@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">@color/white</color>
-    <color name="colorPrimaryDark">@color/red_logo</color>
+    <color name="colorPrimaryDark">@color/logoRed</color>
     <color name="colorAccent">#D81B60</color>
     <color name="white">@android:color/white</color>
     <color name="black">@android:color/black</color>
@@ -10,13 +10,13 @@
     <color name="transparent">#00ffffff</color>
     <color name="grey">#696969</color>
     <color name="greyLight">#ddd</color>
-    <color name="red_logo">#dc3545</color>
+    <color name="logoRed">#dc3545</color>
     <color name="transparent_80_percent">#20000000</color>
     <color name="transparent_50_percent">#50000000</color>
     <color name="transparent_30_percent">#80000000</color>
-    <color name="blackLight">#23232d</color>
+    <color name="lightBlack">#23232d</color>
     <color name="lowWhite">#96FFFFFF</color>
-    <color name="silverLight">#EEEEEE</color>
+    <color name="lightSilver">#EEEEEE</color>
     <color name="blue">#2196F3</color>
     <color name="red">#F00</color>
     <color name="green">#090</color>
@@ -26,8 +26,9 @@
     <color name="lightBlue">#33b5e5</color>
     <color name="pink">#f50684</color>
     <color name="pinkShade">#e2f91289</color>
-    <color name="off_white">#c0f5f4f4</color>
-    <color name="grey_dark">#212121</color>
-    <color name="green_medium">#37a849</color>
+    <color name="offWhite">#c0f5f4f4</color>
+    <color name="greyDark">#212121</color>
+    <color name="greenMedium">#37a849</color>
+    <color name="tealMedium">#009688</color>
 
 </resources>

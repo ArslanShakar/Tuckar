@@ -61,7 +61,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
-        android:background="@color/red_logo"
+        android:background="@color/logoRed"
         android:drawableStart="@drawable/ic_home_add"
         android:drawablePadding="8dp"
         android:gravity="start|center_vertical"

@@ -7,21 +7,31 @@
             android:id="@+id/mHome"
             android:icon="@drawable/ic_home"
             android:title="@string/home" />
+
+        <item
+            android:id="@+id/mDashboard"
+            android:icon="@drawable/ic_home_dashboard"
+            android:title="@string/dashboard" />
         <item
             android:id="@+id/mSearch"
             android:icon="@drawable/ic_search"
             android:title="@string/search" />
         <item
             android:id="@+id/mStory"
-            android:icon="@drawable/story"
+            android:icon="@drawable/ic_our_story"
             android:title="@string/our_story" />
         <item
             android:id="@+id/mContactUs"
-            android:icon="@drawable/contact_us"
+            android:icon="@drawable/ic_contact_us"
             android:title="@string/contact_us" />
         <item
             android:id="@+id/mLogin"
             android:icon="@drawable/ic_login"
             android:title="@string/login" />
+
+        <item
+            android:id="@+id/mLogout"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/logout" />
     </group>
 </menu>

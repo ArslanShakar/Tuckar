@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context=".activities.UserDashboardActivity">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow android:divider="@drawable/divider_light_grey">
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_listings"
+                android:gravity="center_vertical"
+                android:onClick="listingsOnClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="listingsOnClick"
+                android:padding="16dp"
+                android:text="@string/listings"
+                android:textSize="24sp" />
+
+        </TableRow>
+
+        <include
+            layout="@layout/layout_divider_horizontal_light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_buy_credits"
+                android:gravity="center_vertical"
+                android:onClick="buyCreditsOnClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="buyCreditsOnClick"
+                android:padding="16dp"
+                android:text="@string/buy_credits"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <include
+            layout="@layout/layout_divider_horizontal_light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_account_setting"
+                android:gravity="center_vertical"
+                android:onClick="accountSettingOnClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="accountSettingOnClick"
+                android:padding="16dp"
+                android:text="@string/account_settings"
+                android:textSize="24sp" />
+        </TableRow>
+
+        <include
+            layout="@layout/layout_divider_horizontal_light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+
+        <TableRow>
+
+            <TextView
+                android:layout_marginStart="16dp"
+                android:background="@drawable/ic_home_cart"
+                android:gravity="center_vertical"
+                android:onClick="savedOnClick" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="savedOnClick"
+                android:padding="16dp"
+                android:text="@string/saved"
+                android:textSize="24sp" />
+        </TableRow>
+    </TableLayout>
+
+    <include layout="@layout/layout_divider_horizontal_light_grey" />
+</LinearLayout>

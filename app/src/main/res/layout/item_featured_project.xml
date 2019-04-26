@@ -29,7 +29,7 @@
         android:paddingEnd="8dp"
         android:paddingBottom="4dp"
         android:text="Decent Corporation"
-        android:textColor="@color/red_logo" />
+        android:textColor="@color/logoRed" />
 
 
 </LinearLayout>

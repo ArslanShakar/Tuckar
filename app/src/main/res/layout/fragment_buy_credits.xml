@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragments.FragmentBuyCredits">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:stretchColumns="*">
+
+        <EditText
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_bg_white_stroke_light_grey"
+            android:hint="@string/standard_credits"
+            android:inputType="number"
+            android:padding="@dimen/edit_text_padding"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_bg_white_stroke_light_grey"
+            android:hint="@string/premium_credits"
+            android:inputType="number"
+            android:padding="@dimen/edit_text_padding"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_bg_white_stroke_light_grey"
+            android:hint="@string/premium_plus_credits"
+            android:inputType="number"
+            android:padding="@dimen/edit_text_padding"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_bg_white_stroke_light_grey"
+            android:hint="@string/refresh_credits"
+            android:inputType="number"
+            android:padding="@dimen/edit_text_padding"
+            tools:ignore="Autofill" />
+
+        <Button
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_bg_logo_red"
+            android:text="@string/place_order"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </TableLayout>
+</LinearLayout>

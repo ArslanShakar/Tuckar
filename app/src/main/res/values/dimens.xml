@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="min_width_dialog_fragment">300dp</dimen>
+    <dimen name="edit_text_padding">8dp</dimen>
+    <dimen name="profile_image_width_height">128dp</dimen>
+    <dimen name="edit_text_width_normal">180dp</dimen>
+    <dimen name="max_height_description_address">200dp</dimen>
+    <dimen name="credits_remaining_text_size">10sp</dimen>
 </resources>

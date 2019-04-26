@@ -15,7 +15,7 @@
         android:focusable="true"
         android:padding="8dp"
         android:text="@string/reset_filters"
-        android:textColor="@color/red_logo" />
+        android:textColor="@color/logoRed" />
 
     <Button
         android:layout_width="match_parent"

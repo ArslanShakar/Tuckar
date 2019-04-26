@@ -62,13 +62,13 @@
                     android:onClick="rentPropertyOnClick"
                     android:text="@string/rent"
                     android:textAllCaps="false"
-                    android:textColor="@color/red_logo"
+                    android:textColor="@color/logoRed"
                     android:textStyle="bold" />
 
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/red_logo" />
+                    android:background="@color/logoRed" />
 
                 <Button
                     android:layout_width="0dp"
@@ -78,7 +78,7 @@
                     android:onClick="investOnClick"
                     android:text="@string/invest"
                     android:textAllCaps="false"
-                    android:textColor="@color/red_logo"
+                    android:textColor="@color/logoRed"
                     android:textStyle="bold" />
             </LinearLayout>
 

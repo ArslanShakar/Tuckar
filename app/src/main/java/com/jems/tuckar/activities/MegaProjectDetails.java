@@ -1,4 +1,4 @@
-package com.jems.tuckar;
+package com.jems.tuckar.activities;
 
 import android.location.LocationManager;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.jems.tuckar.R;
 import com.jems.tuckar.utils.ImageSlider;
 import com.smarteist.autoimageslider.SliderLayout;
 

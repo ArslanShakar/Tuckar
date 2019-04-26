@@ -11,7 +11,6 @@
     <string name="closed">Closed</string>
     <string name="add_property">Add Property</string>
     <string name="buy">Buy</string>
-    <string name="rent">Rent</string>
     <string name="invest">Invest</string>
     <string name="reset_filters">Reset Filters</string>
     <string name="select_city">Select City</string>
@@ -28,7 +27,7 @@
     <string name="dummy_description">Saeed Property Center is a real estate agency based in F-6, dealing mainly in CDA managed sectors. Saeed Property Center brings over a decade of experience to provide its clients with superior services in the sale, purchase and rent of residential and commercial properties. It prides itself in maintaining its reputation as one of the leading real estate agencies in Islamabad. Saeed Property Center proactively works towards building long term relationships with clients, by offering personalized service, and prioritizing customer satisfaction.</string>
     <string name="location">Location</string>
     <string name="title_activity_maps">Map</string>
-    <string name="user_name">User Name</string>
+    <string name="first_name">First Name</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
     <string name="create_an_account">Create an account</string>
@@ -42,7 +41,6 @@
     <string name="register">Register</string>
     <string name="year">Year</string>
     <string name="title">Title</string>
-    <string name="description">Description</string>
     <string name="head_office">Head Office</string>
     <string name="address">Address</string>
     <string name="schedule">Schedule</string>
@@ -62,4 +60,61 @@
     <string name="dismiss">Dismiss</string>
     <string name="incorrect_phone_format">Phone Number Format is Invalid!</string>
     <string name="mobile_not_found">Mobile no. Not Found.</string>
+    <string name="last_name">Last Name</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="company">Company</string>
+    <string name="website">Website</string>
+    <string name="update">Update</string>
+    <string name="listings">Listings</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="buy_credits">Buy Credits</string>
+    <string name="standard_credits">Standard Credits</string>
+    <string name="refresh_credits">Refresh Credits</string>
+    <string name="premium_plus_credits">Premium Plus Credits</string>
+    <string name="premium_credits">Premium Credits</string>
+    <string name="place_order">Place Order</string>
+    <string name="credits_history">Credits History</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="select_action">Select Action</string>
+    <string name="choose_photo_from_gallery">Choose photo from gallery…</string>
+    <string name="take_photo_from_camera">Take photo from camera…</string>
+    <string name="remove_photo">Remove Photo…</string>
+    <string name="properties">Properties</string>
+    <string name="projects">Projects</string>
+    <string name="saved">Saved</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="logout">Logout</string>
+    <string name="reset">Reset</string>
+    <string name="sale">Sale</string>
+    <string name="rent">Rent</string>
+    <string name="add_a_custom_title">Add a custom title</string>
+    <string name="enter_custom_title">Enter Custom Title</string>
+    <string name="custom_title">Custom Title</string>
+    <string name="listing_type">Listing Type</string>
+    <string name="standard">Standard</string>
+    <string name="credits_remaining">Credits Remaining</string>
+    <string name="zero">0</string>
+    <string name="premium">Premium</string>
+    <string name="premium_plus">Premium Plus</string>
+    <string name="price_in_rupees">Price in Rupees</string>
+    <string name="enter_price">Enter Price</string>
+    <string name="description">Description</string>
+    <string name="display_address_on_listing">Display address on listing</string>
+    <string name="area_details">Area Details</string>
+    <string name="area_occupied">Area Occupied</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="upload_photos">Upload Photos</string>
+    <string name="submit">Submit</string>
+    <string name="unit">Unit</string>
+    <string name="use_tuckar_generated_title">Use Tuckar Generated Title</string>
+
+    <string-array name="area_units_array">
+        <item>Unit</item>
+        <item>Yd<sup>2</sup></item>
+        <item>Ft<sup>2</sup></item>
+        <item>M<sup>2</sup></item>
+        <item>Kanal</item>
+        <item>Marla</item>
+    </string-array>
 </resources>

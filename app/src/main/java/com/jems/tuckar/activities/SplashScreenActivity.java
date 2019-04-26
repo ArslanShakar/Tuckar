@@ -1,9 +1,10 @@
-package com.jems.tuckar;
+package com.jems.tuckar.activities;
 
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
+import com.jems.tuckar.R;
 import com.jems.tuckar.utils.SwitchActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -34,7 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        SwitchActivity.moveTo(SplashScreenActivity.this, MainActivity.class);
+        SwitchActivity.moveTo(SplashScreenActivity.this, AddProperty.class);
         //checkUserSession();
     }
 }

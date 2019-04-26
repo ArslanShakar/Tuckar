@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".activities.AddProperty">
+
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <TableRow>
+
+            <TextView
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/reset" />
+
+            <TextView
+                android:background="@color/offWhite"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/add_property" />
+
+            <TextView
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/cancel" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="8dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/sale"
+                android:textColor="@color/tealMedium"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/rent"
+                android:textColor="@color/tealMedium"
+                android:textIsSelectable="true" />
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ***********  Add Custom Title  *********** -->
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <TextView
+                android:id="@+id/tv_add_custom_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="8dp"
+                android:drawableStart="@drawable/ic_add"
+                android:drawableEnd="@drawable/ic_info"
+                android:drawablePadding="8dp"
+                android:onClick="addCustomTitleOnClick"
+                android:text="@string/add_a_custom_title" />
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <!-- ***********  Custom Title  *********** -->
+            <LinearLayout
+                android:id="@+id/ll_custom_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offWhite"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/custom_title"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_custom_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_bg_white_stroke_light_grey"
+                    android:hint="@string/enter_custom_title"
+                    android:inputType="textCapWords"
+                    android:padding="@dimen/edit_text_padding"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <!-- ***********  Listing Type  *********** -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/offWhite"
+                android:gravity="center"
+                android:stretchColumns="*">
+
+                <include
+                    layout="@layout/layout_divider_horizontal_light_grey"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp" />
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/listing_type"
+                        android:textStyle="bold" />
+                </TableRow>
+
+
+                <RadioGroup
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/standard_listing_type_selector"
+                        android:text="@string/standard" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:button="@drawable/premium_listing_type_selector"
+                        android:text="@string/premium" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:button="@drawable/premium_plus_listing_type_selector"
+                        android:text="@string/premium_plus" />
+                </RadioGroup>
+
+                <TextView
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="@string/credits_remaining"
+                    android:textStyle="bold" />
+
+                <TableRow>
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/standard" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/premium" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/premium_plus" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/zero"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/zero"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:gravity="center"
+                        android:text="@string/zero"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <include
+                    layout="@layout/layout_divider_horizontal_light_grey"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp" />
+            </TableLayout>
+
+
+            <!-- ***********  Price  *********** -->
+            <include
+                layout="@layout/layout_divider_horizontal_light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offWhite"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price_in_rupees"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_bg_white_stroke_light_grey"
+                    android:ems="8"
+                    android:hint="@string/enter_price"
+                    android:inputType="number"
+                    android:padding="@dimen/edit_text_padding"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <!-- ***********  Description  *********** -->
+            <include
+                layout="@layout/layout_divider_horizontal_light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offWhite"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_bg_white_stroke_light_grey"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxHeight="@dimen/max_height_description_address"
+                    android:padding="@dimen/edit_text_padding"
+                    android:scrollbars="vertical"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <!-- ***********  Location  *********** -->
+            <include
+                layout="@layout/layout_divider_horizontal_light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offWhite"
+                android:gravity="center"
+                android:padding="8dp"
+                android:stretchColumns="*">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location"
+                    android:textStyle="bold" />
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_marginEnd="2dp"
+                        android:background="@drawable/round_bg_white_stroke_light_grey"
+                        android:drawableEnd="@drawable/ic_arrow_drop"
+                        android:padding="8dp"
+                        android:text="@string/select_city" />
+
+                    <TextView
+                        android:layout_marginStart="2dp"
+                        android:background="@drawable/round_bg_white_stroke_light_grey"
+                        android:drawableEnd="@drawable/ic_arrow_drop"
+                        android:padding="8dp"
+                        android:text="@string/select_area" />
+                </TableRow>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/round_bg_white_stroke_light_grey"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:maxHeight="@dimen/max_height_description_address"
+                    android:padding="@dimen/edit_text_padding"
+                    android:scrollbars="vertical"
+                    tools:ignore="Autofill" />
+
+                <CheckBox android:text="@string/display_address_on_listing" />
+            </TableLayout>
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <!-- ***********  Area Details  *********** -->
+            <include
+                layout="@layout/layout_divider_horizontal_light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offWhite"
+                android:gravity="center"
+                android:padding="8dp"
+                android:stretchColumns="*">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/area_details"
+                    android:textStyle="bold" />
+
+                <TableRow android:gravity="center_vertical">
+
+                    <EditText
+                        android:background="@drawable/round_bg_white_stroke_light_grey"
+                        android:hint="@string/area_occupied"
+                        android:inputType="number"
+                        android:padding="8dp"
+                        tools:ignore="Autofill" />
+
+                    <Spinner
+                        android:layout_marginStart="4dp"
+                        android:entries="@array/area_units_array"
+                        android:padding="8dp"
+                        android:spinnerMode="dialog" />
+                </TableRow>
+            </TableLayout>
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <!-- ***********  Contact Information  *********** -->
+            <include
+                layout="@layout/layout_divider_horizontal_light_grey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/offWhite"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_information"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_bg_white_stroke_light_grey"
+                    android:digits="+0123456789"
+                    android:drawableEnd="@drawable/ic_phone_number"
+                    android:drawablePadding="8dp"
+                    android:hint="@string/phone"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:padding="@dimen/edit_text_padding"
+                    tools:ignore="Autofill" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+            <!-- ***********  Upload Photos  *********** -->
+            <!--style="@style/Widget.AppCompat.Button.Borderless"-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/round_bg_white_stroke_red_logo"
+                android:text="@string/upload_photos"
+                android:textAllCaps="false" />
+
+            <!-- ***********  Submit  *********** -->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/logoRed"
+                android:padding="16dp"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

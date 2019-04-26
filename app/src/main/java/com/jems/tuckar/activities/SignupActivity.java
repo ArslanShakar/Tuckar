@@ -1,8 +1,10 @@
-package com.jems.tuckar;
+package com.jems.tuckar.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.jems.tuckar.R;
 
 public class SignupActivity extends AppCompatActivity {
 

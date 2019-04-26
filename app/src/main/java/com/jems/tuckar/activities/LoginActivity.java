@@ -1,9 +1,10 @@
-package com.jems.tuckar;
+package com.jems.tuckar.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.jems.tuckar.R;
 import com.jems.tuckar.utils.SwitchActivity;
 
 public class LoginActivity extends AppCompatActivity {

@@ -1,23 +1,4 @@
-<vector android:height="24dp" android:viewportHeight="64"
-    android:viewportWidth="64" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
-    <path android:fillColor="#00000000"
-        android:pathData="M25,11l-15,4l0,38l15,-4l0,-38z"
-        android:strokeColor="@color/red_logo" android:strokeLineCap="round"
-        android:strokeLineJoin="round" android:strokeWidth="2"/>
-    <path android:fillColor="#00000000"
-        android:pathData="M34.17,13.5l-9.17,-2.5l0,38l15,4l0,-26.56"
-        android:strokeColor="@color/red_logo" android:strokeLineCap="round"
-        android:strokeLineJoin="round" android:strokeWidth="2"/>
-    <path android:fillColor="#00000000"
-        android:pathData="M40,26.44l0,26.56l15,-4l0,-22.56"
-        android:strokeColor="@color/red_logo" android:strokeLineCap="round"
-        android:strokeLineJoin="round" android:strokeWidth="2"/>
-    <path android:fillColor="#00000000"
-        android:pathData="M40.9768,8.2503l0,0a9.21,9.21 89.99,0 1,13.0249 -0.0023l0,0A9.21,9.21 89.99,0 1,54.0252 21.2942L47.5139,27.8078a0,0 0,0 1,0 0L40.9862,21.2823A9.21,9.21 89.99,0 1,40.9768 8.2503Z"
-        android:strokeColor="@color/red_logo" android:strokeLineCap="round"
-        android:strokeLineJoin="round" android:strokeWidth="2"/>
-    <path android:fillColor="@color/red_logo"
-        android:pathData="M47.5,14.68m-4.28,0a4.28,4.28 0,1 1,8.56 0a4.28,4.28 0,1 1,-8.56 0"
-        android:strokeColor="@color/red_logo" android:strokeLineCap="round"
-        android:strokeLineJoin="round" android:strokeWidth="2"/>
+<vector android:height="24dp" android:viewportHeight="1058.75"
+    android:viewportWidth="847" android:width="24dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/logoRed" android:fillType="evenOdd" android:pathData="M423,825c109,-142 315,-301 315,-489 0,-174 -141,-314 -315,-314 -173,0 -314,140 -314,314 0,192 206,347 314,489zM135,336c0,-159 129,-288 288,-288 159,0 288,129 288,288 0,163 -188,329 -287,446 -102,-123 -289,-274 -289,-446zM423,559c123,0 223,-100 223,-223 0,-123 -100,-222 -223,-222 -123,0 -222,99 -222,222 0,123 100,223 222,223zM423,532c-108,0 -196,-88 -196,-196 0,-108 88,-196 196,-196 109,0 196,88 196,196 0,108 -87,196 -196,196z"/>
 </vector>

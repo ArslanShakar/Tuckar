@@ -1,4 +1,4 @@
-package com.jems.tuckar;
+package com.jems.tuckar.activities;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jems.tuckar.R;
 import com.jems.tuckar.fragments.RequestInfoFragment;
 import com.jems.tuckar.utils.OpenDefaultActivities;
 

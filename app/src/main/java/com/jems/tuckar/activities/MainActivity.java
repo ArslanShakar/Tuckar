@@ -1,4 +1,4 @@
-package com.jems.tuckar;
+package com.jems.tuckar.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -11,12 +11,12 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.jems.tuckar.R;
 import com.jems.tuckar.fragments.BuyOrRentPropertyDialogFragment;
 import com.jems.tuckar.fragments.InvestDialogFragment;
 import com.jems.tuckar.utils.ImageSlider;
@@ -86,6 +86,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             case R.id.mContactUs:
                 SwitchActivity.moveTo(this, ContactUsActivity.class);
+                return true;
+            case R.id.mDashboard:
+                SwitchActivity.moveTo(this, UserDashboardActivity.class);
                 return true;
             default:
                 return false;
