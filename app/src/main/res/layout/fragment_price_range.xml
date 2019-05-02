@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:minWidth="@dimen/dialog_fragment_min_width"
+    android:orientation="vertical"
+    tools:context=".fragments.PriceRangeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:text="@string/price_range"
+            android:textColor="@color/grey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:padding="8dp"
+            android:text="@string/close"
+            android:textColor="@color/logoRed"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_divider_horizontal_light_grey" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/min_price"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_min_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:ems="8"
+        android:hint="@string/enter_min_price"
+        android:inputType="number"
+        android:maxLength="10"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/max_price"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_max_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:ems="8"
+        android:hint="@string/enter_max_price"
+        android:inputType="number"
+        android:maxLength="10"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:id="@+id/bt_done"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/logoRed"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

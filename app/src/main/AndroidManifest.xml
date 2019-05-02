@@ -25,7 +25,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/ActivityCustomStyle">
-        <activity android:name=".activities.AddProperty"></activity>
+        <activity android:name=".activities.NewSearchActivity"></activity>
+        <activity
+            android:name=".activities.AddPropertyActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation" />
         <activity android:name=".activities.ListingsActivity" />
         <activity android:name=".activities.SavedProjectsPropertiesActivity" />
         <activity android:name=".activities.CreditsActivity" />

@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.jems.tuckar.R;
 
-public class AddProperty extends AppCompatActivity {
+public class AddPropertyActivity extends AppCompatActivity {
     private TextView tvAddCustomTitle;
     private LinearLayout linearLayoutCustomTitle;
     private EditText etCustomTitle;
@@ -22,7 +22,7 @@ public class AddProperty extends AppCompatActivity {
         initViews();
     }
 
-    /******************  Init View  ******************/
+    /******************  Init Views  ******************/
     private void initViews() {
 
         linearLayoutCustomTitle = findViewById(R.id.ll_custom_title);

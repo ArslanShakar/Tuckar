@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_home_dashboard"
             android:title="@string/dashboard" />
         <item
-            android:id="@+id/mSearch"
+            android:id="@+id/mNewSearch"
             android:icon="@drawable/ic_search"
-            android:title="@string/search" />
+            android:title="@string/new_search" />
         <item
             android:id="@+id/mStory"
             android:icon="@drawable/ic_our_story"

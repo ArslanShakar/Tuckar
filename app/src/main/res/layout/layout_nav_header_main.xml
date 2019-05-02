@@ -65,6 +65,7 @@
         android:drawableStart="@drawable/ic_home_add"
         android:drawablePadding="8dp"
         android:gravity="start|center_vertical"
+        android:onClick="addPropertyNavHeaderOnClick"
         android:paddingStart="16dp"
         android:paddingEnd="0dp"
         android:text="@string/add_property"

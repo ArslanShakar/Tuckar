@@ -19,9 +19,12 @@ import android.widget.TextView;
 import com.jems.tuckar.R;
 import com.jems.tuckar.fragments.BuyOrRentPropertyDialogFragment;
 import com.jems.tuckar.fragments.InvestDialogFragment;
+import com.jems.tuckar.utils.DDialogShow;
 import com.jems.tuckar.utils.ImageSlider;
 import com.jems.tuckar.utils.SwitchActivity;
 import com.smarteist.autoimageslider.SliderLayout;
+
+import static com.jems.tuckar.declarations.Tags.LOGOUT;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -90,6 +93,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.mDashboard:
                 SwitchActivity.moveTo(this, UserDashboardActivity.class);
                 return true;
+            case R.id.mNewSearch:
+                SwitchActivity.moveTo(this, NewSearchActivity.class);
+                return true;
+            case R.id.mLogout:
+                DDialogShow.yesOrNoDialogFragment(this, getString(R.string.logout_message), LOGOUT);
+                return true;
+
             default:
                 return false;
         }
@@ -190,7 +200,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.getMenu().clear();
         navigationView.inflateMenu(R.menu.nav_drawer_main);
     }
-    /***************     ***************/
+
+    /***************  Add Property Nav Header On Click   ***************/
+    public void addPropertyNavHeaderOnClick(View view) {
+        SwitchActivity.moveTo(this, AddPropertyActivity.class);
+    }
+
     /***************     ***************/
 
     /***************     ***************/

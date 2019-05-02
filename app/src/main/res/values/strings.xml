@@ -108,6 +108,31 @@
     <string name="submit">Submit</string>
     <string name="unit">Unit</string>
     <string name="use_tuckar_generated_title">Use Tuckar Generated Title</string>
+    <string name="filters">Filters</string>
+    <string name="property_type">Property Type</string>
+    <string name="type">Type:&#160;</string>
+    <string name="subtype">Subtype:&#160;</string>
+    <string name="any">Any</string>
+    <string name="new_search">New Search</string>
+    <string name="residential">Residential</string>
+    <string name="plot">Plot</string>
+    <string name="commercial">Commercial</string>
+    <string name="all_types">All Types</string>
+    <string name="done">Done</string>
+    <string name="price_range">Price Range</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="show_listings_with_images">Show listings with images only</string>
+    <string name="min_price">Min Price</string>
+    <string name="max_price">Max Price</string>
+    <string name="enter_min_price">Enter Min Price</string>
+    <string name="enter_max_price">Enter Max Price</string>
+    <string name="close">Close</string>
+    <string name="null_text">Null</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="logout_message">Are you sure you want to Logout?</string>
+    <string name="minimum_price_cannot_greater">Minimum price cannot be greater than maximum price.</string>
 
     <string-array name="area_units_array">
         <item>Unit</item>
@@ -117,4 +142,77 @@
         <item>Kanal</item>
         <item>Marla</item>
     </string-array>
+    <string-array name="min_area_array">
+        <item>Any</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>12</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+    </string-array>
+    <string-array name="max_area_array">
+        <item>Any</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>12</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+        <item>200</item>
+    </string-array>
+
+    <string-array name="residential_property_types_array">
+        <item>Any</item>
+        <item>House</item>
+        <item>Apartment</item>
+        <item>Upper portion</item>
+        <item>Lower portion</item>
+        <item>Farm house</item>
+        <item>Room</item>
+        <item>Penthouse</item>
+        <item>Hotel suites</item>
+        <item>Basement</item>
+        <item>Annexe</item>
+        <item>Hostel</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="plot_property_types_array">
+        <item>Any</item>
+        <item>Residential plot</item>
+        <item>Commercial plot</item>
+        <item>Agricultural land</item>
+        <item>Industrial land</item>
+        <item>Plot file</item>
+        <item>Farmhouse plot</item>
+    </string-array>
+
+    <string-array name="commercial_property_types_array">
+        <item>Any</item>
+        <item>Office</item>
+        <item>Shop</item>
+        <item>Warehouse</item>
+        <item>Factory</item>
+        <item>Building</item>
+        <item>Other</item>
+    </string-array>
+
 </resources>
