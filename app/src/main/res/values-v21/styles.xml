@@ -6,7 +6,10 @@
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:textColor">@color/lightBlack</item>
-        <!-- <item name="android:colorControlActivated">@color/colorAccent</item>-->
+
+        <!-- checked radioButtons, rating bar, checked checkbox, edit text writing text color by default it is color accent now overwrite-->
+        <item name="android:colorControlActivated">@color/logoRed</item>
+
     </style>
 
     <style name="MyToolBarTheme" parent="Theme.AppCompat.Light">

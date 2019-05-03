@@ -133,6 +133,9 @@
     <string name="yes">Yes</string>
     <string name="logout_message">Are you sure you want to Logout?</string>
     <string name="minimum_price_cannot_greater">Minimum price cannot be greater than maximum price.</string>
+    <string name="rs">Rs</string>
+    <string name="general_info">General Info</string>
+    <string name="reset_password">Reset Password</string>
 
     <string-array name="area_units_array">
         <item>Unit</item>

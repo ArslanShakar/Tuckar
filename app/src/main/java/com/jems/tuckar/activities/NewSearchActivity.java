@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.jems.tuckar.R;
 import com.jems.tuckar.fragments.PriceRangeFragment;
+import com.jems.tuckar.utils.FormatNumber;
 
 import java.util.Locale;
 
@@ -22,9 +23,10 @@ public class NewSearchActivity extends AppCompatActivity implements RadioGroup.O
     private LinearLayout linearLayoutPropertyType;
     private TableLayout tableLayoutSelectPropertyType;
     private RadioGroup rgPropertyType;
-    private TextView tvPropertyType, tvPropertySubType, tvPriceRange;
+    private TextView tvPropertyType, tvPropertySubType, tvPriceRange, btBuy, btRent;
     private String selectedPropertyType;
     private Spinner spinnerPropertySubtype;
+    private RadioButton rbAllTypes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +46,12 @@ public class NewSearchActivity extends AppCompatActivity implements RadioGroup.O
         tvPropertyType = findViewById(R.id.tv_property_type);
         tvPropertySubType = findViewById(R.id.tv_property_subtype);
         tvPriceRange = findViewById(R.id.tv_price_range);
+        btBuy = findViewById(R.id.bt_buy);
+        btRent = findViewById(R.id.bt_rent);
 
         spinnerPropertySubtype = findViewById(R.id.sp_property_subtype);
+
+        rbAllTypes = findViewById(R.id.rb_all_types);
     }
 
     /************* Set Views Listeners *************/
@@ -60,18 +66,15 @@ public class NewSearchActivity extends AppCompatActivity implements RadioGroup.O
     }
 
     /************* Done Property Type Selection OnClick  *************/
-    public void propertyTypeSelectionDoneOnClick(View view) {
-
+    public void donePropertyTypeOnClick(View view) {
         linearLayoutPropertyType.setVisibility(View.VISIBLE);
-
-        if (selectedPropertyType.equals(getString(R.string.all_types))) {
+        if (rbAllTypes.isChecked()) {
             tvPropertyType.setText(R.string.any);
             tvPropertySubType.setText(R.string.any);
         } else {
             tvPropertyType.setText(selectedPropertyType);
             tvPropertySubType.setText(spinnerPropertySubtype.getSelectedItem().toString());
         }
-
         tableLayoutSelectPropertyType.setVisibility(View.GONE);
     }
 
@@ -117,20 +120,28 @@ public class NewSearchActivity extends AppCompatActivity implements RadioGroup.O
 
     /************* Implement Price Range Listener Method  *************/
     @Override
-    public void setPriceRange(long minPrice, long maxPrice) {
+    public void setPriceRange(float minPrice, float maxPrice) {
         if (minPrice == 0 && maxPrice > 0) {
-            tvPriceRange.setText(String.format(Locale.US, "%s: %d", getString(R.string.max), maxPrice));
+            tvPriceRange.setText(String.format(Locale.US, "%s: %s", getString(R.string.max), FormatNumber.toShortForm(maxPrice)));
         } else if (minPrice > 0 && maxPrice == 0) {
-            tvPriceRange.setText(String.format(Locale.US, "%s: %d", getString(R.string.min), minPrice));
+            tvPriceRange.setText(String.format(Locale.US, "%s: %s", getString(R.string.min), FormatNumber.toShortForm(minPrice)));
         } else if (minPrice > 0 || maxPrice > 0) {
-            tvPriceRange.setText(String.format(Locale.US, "%s: %d \t%s: %d", getString(R.string.min), minPrice, getString(R.string.max), maxPrice));
+            tvPriceRange.setText(String.format(Locale.US, "%s: %s \t%s: %s", getString(R.string.min), FormatNumber.toShortForm(minPrice), getString(R.string.max), FormatNumber.toShortForm(maxPrice)));
         } else {
             tvPriceRange.setText(R.string.any);
         }
     }
 
+    /************* Buy On Click *************/
+    public void btBuyOnClick(View v) {
+        btRent.setBackgroundResource(R.color.transparent);
+        btBuy.setBackgroundResource(R.drawable.bg_view_on_click);
+    }
 
-    /*************   *************/
+    public void btRentOnClick(View view) {
+        btBuy.setBackgroundResource(R.color.transparent);
+        btRent.setBackgroundResource(R.drawable.bg_view_on_click);
+    }
 
     /*************   *************/
 

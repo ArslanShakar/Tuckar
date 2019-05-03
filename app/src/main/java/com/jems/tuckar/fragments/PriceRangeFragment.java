@@ -5,7 +5,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetDialogFragment;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +17,15 @@ import android.widget.TextView;
 
 import com.jems.tuckar.R;
 import com.jems.tuckar.utils.CloseDialog;
+import com.jems.tuckar.utils.FormatNumber;
 import com.jems.tuckar.utils.MMessage;
 
-public class PriceRangeFragment extends BottomSheetDialogFragment implements View.OnClickListener {
+public class PriceRangeFragment extends BottomSheetDialogFragment implements View.OnClickListener, TextWatcher {
+
+    private TextView tvMinPrice, tvMaxPrice;
 
     public interface PriceRangeListener {
-        void setPriceRange(long minPrice, long maxPrice);
+        void setPriceRange(float minPrice, float maxPrice);
     }
 
     private PriceRangeListener priceRangeListener;
@@ -30,12 +35,15 @@ public class PriceRangeFragment extends BottomSheetDialogFragment implements Vie
         // Required empty public constructor
     }
 
+
+    /**********  on Attach  **********/
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         priceRangeListener = (PriceRangeListener) context;
     }
 
+    /**********  on Create View  **********/
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,9 +53,14 @@ public class PriceRangeFragment extends BottomSheetDialogFragment implements Vie
         etMaxPrice = view.findViewById(R.id.et_max_price);
 
         TextView tvClose = view.findViewById(R.id.tv_close);
-        tvClose.setOnClickListener(this);
+        tvMinPrice = view.findViewById(R.id.tv_min_price);
+        tvMaxPrice = view.findViewById(R.id.tv_max_price);
 
         Button btDone = view.findViewById(R.id.bt_done);
+
+        etMinPrice.addTextChangedListener(this);
+        etMaxPrice.addTextChangedListener(this);
+        tvClose.setOnClickListener(this);
         btDone.setOnClickListener(this);
 
         getDialog().requestWindowFeature(STYLE_NO_TITLE);
@@ -56,19 +69,20 @@ public class PriceRangeFragment extends BottomSheetDialogFragment implements Vie
         return view;
     }
 
+    /**********  Override onClick method  **********/
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_done: {
-                long minPrice = 0;
-                long maxPrice = 0;
+                float minPrice = 0;
+                float maxPrice = 0;
                 if (!TextUtils.isEmpty(etMinPrice.getText().toString())) {
-                    minPrice = Long.parseLong(etMinPrice.getText().toString().trim());
+                    minPrice = Float.parseFloat(etMinPrice.getText().toString().trim());
                 }
                 if (!TextUtils.isEmpty(etMaxPrice.getText().toString())) {
-                    maxPrice = Long.parseLong(etMaxPrice.getText().toString().trim());
+                    maxPrice = Float.parseFloat(etMaxPrice.getText().toString().trim());
                 }
-                if (minPrice > 0 && minPrice > maxPrice) {
+                if (maxPrice > 0 && minPrice > maxPrice) {
                     MMessage.toastShow(getContext(), R.string.minimum_price_cannot_greater);
                 } else {
                     priceRangeListener.setPriceRange(minPrice, maxPrice);
@@ -80,6 +94,40 @@ public class PriceRangeFragment extends BottomSheetDialogFragment implements Vie
                 dismiss();
                 break;
         }
+    }
+
+
+    /********** Implements Methods of TextWatcher ***********/
+    @Override
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+    }
+
+    @Override
+    public void onTextChanged(CharSequence s, int start, int before, int count) {
+    }
+
+    @Override
+    public void afterTextChanged(Editable s) {
+
+        if(etMinPrice.isFocused())
+        {
+            if (etMinPrice.getText().length() > 0) {
+                String convertedValue = FormatNumber.toShortForm(Float.parseFloat(etMinPrice.getText().toString()));
+                tvMinPrice.setText(String.format("%s: %s", getString(R.string.rs), convertedValue));
+            } else {
+                tvMinPrice.setText("");
+            }
+        }else
+        {
+            if (etMaxPrice.getText().length() > 0) {
+                String convertedValue = FormatNumber.toShortForm(Float.parseFloat(etMaxPrice.getText().toString()));
+                tvMaxPrice.setText(String.format("%s: %s", getString(R.string.rs), convertedValue));
+            } else {
+                tvMaxPrice.setText("");
+            }
+        }
+
     }
 
 

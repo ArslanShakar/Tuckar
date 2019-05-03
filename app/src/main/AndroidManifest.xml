@@ -30,7 +30,7 @@
             android:name=".activities.AddPropertyActivity"
             android:configChanges="keyboardHidden|screenSize|orientation" />
         <activity android:name=".activities.ListingsActivity" />
-        <activity android:name=".activities.SavedProjectsPropertiesActivity" />
+        <activity android:name=".activities.SavedPropertiesProjectsActivity" />
         <activity android:name=".activities.CreditsActivity" />
         <activity android:name=".activities.UserDashboardActivity" />
         <activity android:name=".activities.UserAccountSettingActivity" />

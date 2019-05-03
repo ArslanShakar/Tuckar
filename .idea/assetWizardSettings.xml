@@ -74,10 +74,13 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="040404" />
-                            <entry key="outputName" value="ic_remove" />
+                            <entry key="height" value="84" />
+                            <entry key="outputName" value="ic_reset_password" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="D:\Android Data\Icons\Icon SVG\ic_phone number.svg" />
+                            <entry key="sourceFile" value="D:\Android Data\Icons\Icon SVG\ic_reset_password.svg" />
+                            <entry key="width" value="67" />
                           </map>
                         </option>
                       </PersistentState>

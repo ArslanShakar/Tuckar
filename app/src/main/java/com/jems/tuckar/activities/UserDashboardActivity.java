@@ -27,7 +27,7 @@ public class UserDashboardActivity extends AppCompatActivity {
 
     /****************    *****************/
     public void savedOnClick(View view) {
-        SwitchActivity.moveTo(this, SavedProjectsPropertiesActivity.class);
+        SwitchActivity.moveTo(this, SavedPropertiesProjectsActivity.class);
     }
 
     /****************    *****************/

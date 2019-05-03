@@ -54,7 +54,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:background="@color/greyLight" />
+                android:background="@color/lightGrey" />
 
             <TextView
                 android:layout_width="match_parent"

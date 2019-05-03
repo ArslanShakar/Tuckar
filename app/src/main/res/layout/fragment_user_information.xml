@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_profile"
+            android:layout_width="@dimen/profile_image_width_height"
+            android:layout_height="@dimen/profile_image_width_height"
+            android:src="@drawable/profile_default_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/profile_image_width_height" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/image"
+            android:onClick="changeProfileImageOnClick"
+            app:layout_constraintBottom_toBottomOf="@id/image_profile"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:srcCompat="@drawable/ic_add_image" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:hint="@string/first_name"
+        android:inputType="textCapWords"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:hint="@string/last_name"
+        android:inputType="textCapWords"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:digits="+0123456789"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:hint="@string/country"
+        android:inputType="textCapWords"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:hint="@string/city"
+        android:inputType="textCapWords"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:hint="@string/address"
+        android:inputType="textMultiLine|textCapSentences"
+        android:maxHeight="200dp"
+        android:maxLines="4"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:hint="@string/company"
+        android:inputType="textCapWords"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_white_stroke_light_grey"
+        android:hint="@string/website"
+        android:inputType="textCapWords"
+        android:padding="@dimen/edit_text_padding"
+        tools:ignore="Autofill" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_bg_logo_red"
+        android:text="@string/update"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+</LinearLayout>

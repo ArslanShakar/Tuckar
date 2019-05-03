@@ -9,7 +9,7 @@
     <color name="grey_medium">#948991</color>
     <color name="transparent">#00ffffff</color>
     <color name="grey">#696969</color>
-    <color name="greyLight">#ddd</color>
+    <color name="lightGrey">#ddd</color>
     <color name="logoRed">#dc3545</color>
     <color name="transparent_80_percent">#20000000</color>
     <color name="transparent_50_percent">#50000000</color>

@@ -7,11 +7,16 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 
 import com.jems.tuckar.R;
+import com.jems.tuckar.fragments.ResetPasswordFragment;
+import com.jems.tuckar.fragments.UserInformationFragment;
+import com.jems.tuckar.utils.ChangeBackground;
 import com.jems.tuckar.utils.ImageUtils;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -21,6 +26,8 @@ public class UserAccountSettingActivity extends AppCompatActivity {
     private final int REQUEST_CODE_GALLERY = 0;
     private final int REQUEST_CODE_CAMERA = 1;
     private CircleImageView imgViewProfile;
+    private FragmentManager manager;
+    private Button btUserGeneralInfo, btResetPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +35,17 @@ public class UserAccountSettingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_user_account_setting);
 
         initViews();
+
+        manager = getSupportFragmentManager();
+
+        showUserGeneralInfo(null);
     }
 
     /**************** Init Views  *****************/
     private void initViews() {
         imgViewProfile = findViewById(R.id.image_profile);
+        btResetPassword = findViewById(R.id.bt_reset_password);
+        btUserGeneralInfo = findViewById(R.id.bt_user_general_info);
     }
 
     /****************  add profile image onClick  *****************/
@@ -123,11 +136,18 @@ public class UserAccountSettingActivity extends AppCompatActivity {
         imgViewProfile.setImageResource(R.drawable.profile_default_image);
     }
 
-    /****************    *****************/
+    /****************  button General Info OnClick  *****************/
+    public void showUserGeneralInfo(View view) {
+        ChangeBackground.onClickView(btUserGeneralInfo, btResetPassword);
+        manager.beginTransaction().replace(R.id.ll_fragment_container, new UserInformationFragment()).commit();
+    }
 
 
-    /****************    *****************/
-
+    /****************  Button Reset Password OnClick  *****************/
+    public void resetPassword(View view) {
+        ChangeBackground.onClickView(btResetPassword, btUserGeneralInfo);
+        manager.beginTransaction().replace(R.id.ll_fragment_container, new ResetPasswordFragment()).commit();
+    }
 
     /****************    *****************/
 

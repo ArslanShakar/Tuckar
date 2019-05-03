@@ -35,48 +35,76 @@
 
     <include layout="@layout/layout_divider_horizontal_light_grey" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <TableLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/min_price"
-        android:textStyle="bold" />
+        android:gravity="center_vertical">
 
-    <EditText
-        android:id="@+id/et_min_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/round_bg_white_stroke_light_grey"
-        android:ems="8"
-        android:hint="@string/enter_min_price"
-        android:inputType="number"
-        android:maxLength="10"
-        android:padding="@dimen/edit_text_padding"
-        tools:ignore="Autofill" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/min_price"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/max_price"
-        android:textStyle="bold" />
+        <TableRow>
 
-    <EditText
-        android:id="@+id/et_max_price"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/round_bg_white_stroke_light_grey"
-        android:ems="8"
-        android:hint="@string/enter_max_price"
-        android:inputType="number"
-        android:maxLength="10"
-        android:padding="@dimen/edit_text_padding"
-        tools:ignore="Autofill" />
+            <EditText
+                android:id="@+id/et_min_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_bg_white_stroke_light_grey"
+                android:ems="8"
+                android:hint="@string/enter_min_price"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:padding="@dimen/edit_text_padding"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/tv_min_price"
+                android:layout_marginStart="8dp"
+                android:padding="@dimen/edit_text_padding"
+                android:textColor="@color/logoRed"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/max_price"
+            android:textStyle="bold" />
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/et_max_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/round_bg_white_stroke_light_grey"
+                android:ems="8"
+                android:hint="@string/enter_max_price"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:padding="@dimen/edit_text_padding"
+                tools:ignore="Autofill" />
+
+            <TextView
+                android:id="@+id/tv_max_price"
+                android:layout_marginStart="8dp"
+                android:padding="@dimen/edit_text_padding"
+                android:textColor="@color/logoRed"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
 
     <Button
         android:id="@+id/bt_done"

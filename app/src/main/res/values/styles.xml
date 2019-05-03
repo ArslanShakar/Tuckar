@@ -10,7 +10,6 @@
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:windowBackground">@color/white</item>
 
-
         <!--  overrite default ripple effect color that is grey by default -->
         <item name="android:textColorHighlight">@color/colorAccent</item>
 

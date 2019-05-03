@@ -33,7 +33,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/greyLight" />
+        android:background="@color/lightGrey" />
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
@@ -67,7 +67,7 @@
             android:layout_width="1dp"
             android:layout_height="0dp"
             android:layout_margin="8dp"
-            android:background="@color/greyLight"
+            android:background="@color/lightGrey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/logo"
             app:layout_constraintTop_toTopOf="parent" />

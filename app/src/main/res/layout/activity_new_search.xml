@@ -18,6 +18,7 @@
             android:id="@+id/table_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
             android:stretchColumns="*">
 
             <TableRow>
@@ -29,16 +30,7 @@
                     android:gravity="center"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    android:text="@string/reset" />
-
-                <TextView
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:gravity="center"
-                    android:paddingTop="8dp"
-                    android:paddingBottom="8dp"
-                    android:text="@string/filters"
+                    android:text="@string/reset"
                     android:textStyle="bold" />
 
                 <TextView
@@ -48,36 +40,48 @@
                     android:gravity="center"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"
-                    android:text="@string/cancel" />
+                    android:text="@string/filters"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/cancel"
+                    android:textStyle="bold" />
             </TableRow>
 
             <!-- ***********  BUY / RENT  *********** -->
 
-            <TableRow
-                android:layout_marginTop="8dp"
-                android:gravity="center">
+            <TableRow>
 
-                <TextView
+                <Button
+                    android:id="@+id/bt_buy"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
+                    android:background="@drawable/bg_view_on_click"
                     android:gravity="center"
-                    android:padding="8dp"
+                    android:onClick="btBuyOnClick"
                     android:text="@string/buy"
-                    android:textColor="@color/logoRed" />
+                    android:textColor="@color/logoRed"
+                    android:textStyle="bold" />
 
-                <TextView
+                <Button
+                    android:id="@+id/bt_rent"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:background="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true"
                     android:gravity="center"
-                    android:padding="8dp"
+                    android:onClick="btRentOnClick"
                     android:text="@string/rent"
-                    android:textColor="@color/logoRed" />
+                    android:textColor="@color/logoRed"
+                    android:textStyle="bold" />
             </TableRow>
 
             <include
@@ -132,7 +136,9 @@
                         android:id="@+id/tv_property_type"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/any" />
+                        android:text="@string/any"
+                        android:textColor="@color/green"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -144,7 +150,9 @@
                         android:id="@+id/tv_property_subtype"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/any" />
+                        android:text="@string/any"
+                        android:textColor="@color/green"
+                        android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -189,6 +197,7 @@
                         android:id="@+id/rb_all_types"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="true"
                         android:text="@string/all_types"
                         android:textSize="12sp" />
                 </RadioGroup>
@@ -196,11 +205,8 @@
                 <Spinner
                     android:id="@+id/sp_property_subtype"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="8dp"
                     android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="8dp"
-                    android:entries="@array/area_units_array"
-                    android:padding="8dp"
+                    android:padding="4dp"
                     android:visibility="gone" />
 
                 <Button
@@ -209,7 +215,7 @@
                     android:layout_marginEnd="32dp"
                     android:layout_marginBottom="8dp"
                     android:background="@drawable/round_bg_white_stroke_red_logo"
-                    android:onClick="propertyTypeSelectionDoneOnClick"
+                    android:onClick="donePropertyTypeOnClick"
                     android:text="@string/done"
                     android:textAllCaps="false"
                     android:textColor="@color/logoRed" />
@@ -245,7 +251,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="@string/any" />
+                android:text="@string/any"
+                android:textColor="@color/green"
+                android:textStyle="bold" />
 
             <include layout="@layout/layout_divider_horizontal_light_grey" />
         </LinearLayout>
