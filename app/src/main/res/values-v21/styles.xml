@@ -6,9 +6,8 @@
         <item name="android:windowBackground">@android:color/white</item>
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:textColor">@color/lightBlack</item>
-
-        <!-- checked radioButtons, rating bar, checked checkbox, edit text writing text color by default it is color accent now overwrite-->
-        <item name="android:colorControlActivated">@color/logoRed</item>
+        <item name="colorAccent">@color/logoRed</item>
+        <item name="colorControlActivated">@color/logoRed</item>
 
     </style>
 
@@ -23,5 +22,7 @@
         <item name="android:textColorSecondary">@color/black</item>
         <item name="android:textColor">@color/lightBlack</item>
         <item name="android:statusBarColor">@color/logoRed</item>
+        <item name="colorAccent">@color/logoRed</item>
+        <item name="colorControlActivated">@color/logoRed</item>
     </style>
 </resources>

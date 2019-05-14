@@ -30,7 +30,6 @@ import static com.jems.tuckar.declarations.Tags.LOGOUT;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private NavigationView navigationView;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private TextView tvToolBarTitle;
@@ -70,17 +69,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     /***************   onBackPressed  ***************/
     @Override
     public void onBackPressed() {
-        //do nothing
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
+            closeDrawer();
         } else {
             super.onBackPressed();
         }
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()) {
+            case R.id.mHome:
+                closeDrawer();
+                return true;
             case R.id.mLogin:
                 SwitchActivity.moveTo(this, LoginActivity.class);
                 return true;
@@ -129,7 +131,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             NavigationMenuView navMenuView = (NavigationMenuView) navigationView.getChildAt(0);
             navMenuView.addItemDecoration(dividerItemDecoration);
 
-            actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.opned, R.string.closed) {
+            ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.opned, R.string.closed) {
                 @Override
                 public void onDrawerOpened(View drawerView) {
                     super.onDrawerOpened(drawerView);
@@ -193,10 +195,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         fragment.show(manager, getString(R.string.tag));
     }
 
-    /***************  onStart   ***************/
+    /************ Close Navigation Drawer ************/
+    private void closeDrawer() {
+        drawerLayout.closeDrawer(GravityCompat.START);
+        reInflateNavDrawerMenu();
+    }
+
+    /************ On Restart  ************/
     @Override
-    protected void onStart() {
-        super.onStart();
+    protected void onRestart() {
+        super.onRestart();
+        reInflateNavDrawerMenu();
+    }
+
+    /************ ReInflate Navigation Drawer Menu************/
+    private void reInflateNavDrawerMenu() {
         navigationView.getMenu().clear();
         navigationView.inflateMenu(R.menu.nav_drawer_main);
     }

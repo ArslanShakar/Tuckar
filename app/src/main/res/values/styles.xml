@@ -6,25 +6,27 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:textColor">@color/lightBlack</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/logoRed</item>
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:windowBackground">@color/white</item>
 
-        <!--  overrite default ripple effect color that is grey by default -->
+        <!--  overwrite default ripple effect color that is grey by default -->
         <item name="android:textColorHighlight">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/logoRed</item>
 
     </style>
 
     <style name="SplashStyle" parent="Theme.AppCompat.NoActionBar">
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/tuckar_app_icon</item>
-
+        <item name="android:windowBackground">@color/white</item>
     </style>
 
     <style name="ActivityCustomStyle" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/white</item>
         <item name="android:textColor">@color/lightBlack</item>
         <item name="android:fontFamily">@font/montserrat</item>
+        <item name="colorAccent">@color/logoRed</item>
+        <item name="colorControlActivated">@color/logoRed</item>
 
     </style>
 
@@ -39,5 +41,7 @@
         <item name="android:fontFamily">@font/montserrat</item>
         <item name="android:textColorSecondary">@color/black</item>
         <item name="android:textColor">@color/lightBlack</item>
+        <item name="colorAccent">@color/logoRed</item>
+        <item name="colorControlActivated">@color/logoRed</item>
     </style>
 </resources>

@@ -18,7 +18,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="top|end"
             android:background="@drawable/ic_close"
-
             />
 
         <EditText

@@ -112,7 +112,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:background="@color/logoRed"
+        android:background="@drawable/round_bg_logo_red"
         android:text="@string/done"
         android:textAllCaps="false"
         android:textColor="@color/white"

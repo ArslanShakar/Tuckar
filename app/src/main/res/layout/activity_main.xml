@@ -9,9 +9,7 @@
     android:focusableInTouchMode="true"
     tools:context=".activities.MainActivity">
     <!--
-
     tools:openDrawer="start"
-
     -->
 
     <LinearLayout

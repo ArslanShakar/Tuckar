@@ -28,7 +28,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                     isLoggedIn = true;
                     SwitchActivity.moveTo(SplashScreenActivity.this, MainActivity.class);
                 }
-            }, 200);
+            }, 3000);
         }
     }
 
